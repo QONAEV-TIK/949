@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>№949 Сайлау учаскесі / Избирательный участок №949</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        .lang-btn {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background-color: #0056b3;
+            color: #ffffff;
+            border-color: #0056b3;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #0056b3;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 20px;
+            color: #0056b3;
+        }
+        .header p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .menu-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .menu-title {
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #1a252f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            line-height: 1.4;
+        }
+        .menu-title:hover {
+            background-color: #eef4fc;
+        }
+        .menu-title::after {
+            content: '▼';
+            font-size: 12px;
+            color: #0056b3;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+        .menu-item.active .menu-title::after {
+            transform: rotate(180deg);
+        }
+        .menu-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #ffffff;
+            padding: 0 20px;
+            border-top: 1px solid transparent;
+        }
+        .menu-item.active .menu-content {
+            padding: 15px 20px;
+            border-top-color: #e9ecef;
+            max-height: 3000px;
+        }
+        .sub-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #0056b3;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
+        }
+        .person-name {
+            font-size: 13px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 10px;
+            margin-bottom: 3px;
+        }
+        .view-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #0056b3;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 4px;
+            margin-bottom: 8px;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .view-btn:hover {
+            background-color: #004085;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('kk')">ҚАЗ</button>
+        <button class="lang-btn" onclick="switchLang('ru')">РУС</button>
+    </div>
+
+    <div class="header">
+        <h1 id="site-title">№949 Сайлау учаскесі</h1>
+        <p id="site-subtitle">Ақпараттық портал</p>
+    </div>
+
+    <!-- 1-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title" id="t1">1. №949 сайлау комиссиясының құрамы</div>
+        <div class="menu-content">
+            <a href="komissiya_kk.pdf" target="_blank" class="view-btn" id="btn1">
+                📄 Комиссия құрамын қарау (PDF)
+            </a>
+        </div>
+    </div>
+
+    <!-- 2-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title" id="t2">2. Жоғары тұрған сайлау комиссияларының, соттардың, прокуратура мен құқық қорғау органдарының мекенжайлары мен телефондары</div>
+        <div class="menu-content">
+            <a href="zhogargy_organdar_kk.pdf" target="_blank" class="view-btn" id="btn2">
+                📄 Байланыс деректерін қарау (PDF)
+            </a>
+        </div>
+    </div>
+
+    <!-- 3-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title" id="t3">3. Партиялық тізімдерді ұсынған саяси партиялар мен кандидаттар туралы ақпарат</div>
+        <div class="menu-content">
+            
+            <!-- ОБЛЫСТЫҚ КАНДИДАТТАР -->
+            <div class="sub-title" id="sub3_oblys">📌 Алматы облыстық мәслихатының депутаттығына кандидаттар:</div>
+            
+            <div class="person-name">1. Алтаев Бахыт Найманович</div>
+            <a href="altaev.pdf" target="_blank" class="view-btn" id="btn_altaev">
+                📄 Кандидат туралы ақпарат (PDF)
+            </a>
+
+            <div class="person-name">2. Бейсебаев Тимур Абдукапарович</div>
+            <a href="beisebaev.pdf" target="_blank" class="view-btn" id="btn_beisebaev">
+                📄 Кандидат туралы ақпарат (PDF)
+            </a>
+
+            <div class="person-name">3. Рахманова Бибигул Ербатыровна</div>
+            <a href="rakhmanova.pdf" target="_blank" class="view-btn" id="btn_rakhmanova">
+                📄 Кандидат туралы ақпарат (PDF)
+            </a>
+
+            <!-- ҚАЛАЛЫҚ КАНДИДАТТАР -->
+            <div class="sub-title" id="sub3_qonaev" style="margin-top: 20px;">📌 Қонаев қалалық мәслихатының депутаттығына кандидаттар:</div>
+
+            <div class="person-name">1. Калиев Ренат Ерболұлы</div>
+            <a href="kaliev.pdf" target="_blank" class="view-btn" id="btn_kaliev">
+                📄 Кандидат туралы ақпарат (PDF)
+            </a>
+
+            <div class="person-name">2. Серікжанұлы Тлеубек</div>
+            <a href="serikzhanuly.pdf" target="_blank" class="view-btn" id="btn_serikzhanuly">
+                📄 Кандидат туралы ақпарат (PDF)
+            </a>
+
+            <div class="person-name">3. Утебеков Серік Әділбекұлы</div>
+            <a href="utebekov.pdf" target="_blank" class="view-btn" id="btn_utebekov">
+                📄 Кандидат туралы ақпарат (PDF)
+            </a>
+
+        </div>
+    </div>
+
+    <!-- 4-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title" id="t4">4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері</div>
+        <div class="menu-content">
+            <a href="tardip_eredzheleri_kk.pdf" target="_blank" class="view-btn" id="btn4">
+                📄 Тәртіп ережелерін қарау (PDF)
+            </a>
+        </div>
+    </div>
+
+    <!-- 5-БӨЛІМ -->
+    <div class="menu-item">
+        <div class="menu-title" id="t5">5. Дауыс беруге арналған сайлау бюллетеньдерінің үлгілері</div>
+        <div class="menu-content">
+            
+            <div class="person-name" id="b1_title">1-бюллетень үлгісі:</div>
+            <a href="byulleten_1_kk.pdf" target="_blank" class="view-btn" id="btn_b1">
+                📄 1-бюллетень үлгісін қарау (PDF)
+            </a>
+
+            <div class="person-name" id="b2_title" style="margin-top: 10px;">2-бюллетень үлгісі:</div>
+            <a href="byulleten_2_kk.pdf" target="_blank" class="view-btn" id="btn_b2">
+                📄 2-бюллетень үлгісін қарау (PDF)
+            </a>
+
+        </div>
+    </div>
+
+    <div class="footer" id="footer-text">
+        © 2026 Сайлау учаскесі
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.menu-title').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            document.querySelectorAll('.menu-item').forEach(child => {
+                if (child !== parent) {
+                    child.classList.remove('active');
+                }
+            });
+            parent.classList.toggle('active');
+        });
+    });
+
+    const translations = {
+        kk: {
+            title: "№949 Сайлау учаскесі",
+            subtitle: "Ақпараттық портал",
+            t1: "1. №949 сайлау комиссиясының құрамы",
+            btn1: "📄 Комиссия құрамын қарау (PDF)",
+            btn1_url: "komissiya_kk.pdf",
+
+            t2: "2. Жоғары тұрған сайлау комиссияларының, соттардың, прокуратура мен құқық қорғау органдарының мекенжайлары мен телефондары",
+            btn2: "📄 Байланыс деректерін қарау (PDF)",
+            btn2_url: "zhogargy_organdar_kk.pdf",
+
+            t3: "3. Партиялық тізімдерді ұсынған саяси партиялар мен кандидаттар туралы ақпарат",
+            sub3_oblys: "📌 Алматы облыстық мәслихатының депутаттығына кандидаттар:",
+            sub3_qonaev: "📌 Қонаев қалалық мәслихатының депутаттығына кандидаттар:",
+            btn_cand: "📄 Кандидат туралы ақпарат (PDF)",
+
+            t4: "4. Дауыс беруге арналған үй-жайдағы тәртіп ережелері",
+            btn4: "📄 Тәртіп ережелерін қарау (PDF)",
+            btn4_url: "tardip_eredzheleri_kk.pdf",
+
+            t5: "5. Дауыс беруге арналған сайлау бюллетеньдерінің үлгілері",
+            b1_title: "1-бюллетень үлгісі:",
+            btn_b1: "📄 1-бюллетень үлгісін қарау (PDF)",
+            b1_url: "byulleten_1_kk.pdf",
+
+            b2_title: "2-бюллетень үлгісі:",
+            btn_b2: "📄 2-бюллетень үлгісін қарау (PDF)",
+            b2_url: "byulleten_2_kk.pdf",
+
+            footer: "© 2026 Сайлау учаскесі"
+        },
+        ru: {
+            title: "Избирательный участок №949",
+            subtitle: "Информационный портал",
+            t1: "1. Состав избирательной комиссии №949",
+            btn1: "📄 Просмотреть состав комиссии (PDF)",
+            btn1_url: "komissiya_ru.pdf",
+
+            t2: "2. Адреса и телефоны вышестоящих избирательных комиссий, судов, органов прокуратуры и правоохранительных органов",
+            btn2: "📄 Просмотреть контактные данные (PDF)",
+            btn2_url: "zhogargy_organdar_ru.pdf",
+
+            t3: "3. Информация о политических партиях, выдвинувших партийные списки, и кандидатах",
+            sub3_oblys: "📌 Кандидаты в депутаты Алматинского областного маслихата:",
+            sub3_qonaev: "📌 Кандидаты в депутаты маслихата города Конаев:",
+            btn_cand: "📄 Просмотреть информацию о кандидате (PDF)",
+
+            t4: "4. Правила поведения в помещении для голосования",
+            btn4: "📄 Просмотреть правила поведения (PDF)",
+            btn4_url: "tardip_eredzheleri_ru.pdf",
+
+            t5: "5. Образцы избирательных бюллетеней для голосования",
+            b1_title: "Образец бюллетеня №1:",
+            btn_b1: "📄 Просмотреть образец бюллетеня №1 (PDF)",
+            b1_url: "byulleten_1_ru.pdf",
+
+            b2_title: "Образец бюллетеня №2:",
+            btn_b2: "📄 Просмотреть образец бюллетеня №2 (PDF)",
+            b2_url: "byulleten_2_ru.pdf",
+
+            footer: "© 2026 Избирательный участок"
+        }
+    };
+
+    function switchLang(lang) {
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        if(lang === 'kk') {
+            document.querySelectorAll('.lang-btn')[0].classList.add('active');
+        } else {
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+        }
+
+        const data = translations[lang];
+
+        document.getElementById('site-title').innerText = data.title;
+        document.getElementById('site-subtitle').innerText = data.subtitle;
+        
+        document.getElementById('t1').innerText = data.t1;
+        document.getElementById('btn1').innerText = data.btn1;
+        document.getElementById('btn1').href = data.btn1_url;
+
+        document.getElementById('t2').innerText = data.t2;
+        document.getElementById('btn2').innerText = data.btn2;
+        document.getElementById('btn2').href = data.btn2_url;
+
+        document.getElementById('t3').innerText = data.t3;
+        document.getElementById('sub3_oblys').innerText = data.sub3_oblys;
+        document.getElementById('sub3_qonaev').innerText = data.sub3_qonaev;
+
+        ['altaev', 'beisebaev', 'rakhmanova', 'kaliev', 'serikzhanuly', 'utebekov'].forEach(id => {
+            const btn = document.getElementById('btn_' + id);
+            btn.innerText = data.btn_cand;
+        });
+
+        document.getElementById('t4').innerText = data.t4;
+        document.getElementById('btn4').innerText = data.btn4;
+        document.getElementById('btn4').href = data.btn4_url;
+
+        document.getElementById('t5').innerText = data.t5;
+        document.getElementById('b1_title').innerText = data.b1_title;
+        document.getElementById('btn_b1').innerText = data.btn_b1;
+        document.getElementById('btn_b1').href = data.b1_url;
+
+        document.getElementById('b2_title').innerText = data.b2_title;
+        document.getElementById('btn_b2').innerText = data.btn_b2;
+        document.getElementById('btn_b2').href = data.b2_url;
+
+        document.getElementById('footer-text').innerText = data.footer;
+    }
+</script>
+
+</body>
+</html>
